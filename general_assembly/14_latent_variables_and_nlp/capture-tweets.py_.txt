@@ -1,0 +1,17 @@
+from __future__ import print_function
+import sys
+
+import twitter
+
+if __name__ == '__main__':
+    results = twitter.retrieve_tweets(topic=sys.argv[1])
+    out = open('captured-tweets-new.txt', 'ab')
+    # The tweet is stored with key 'text',
+    i = 0
+    for result in results:
+        out.write((result['text'] + "\n").encode('utf-8'))
+        i += 1
+        # Increase the default for i below, 5000 will take a long time...
+        if i == 5:
+            break
+    out.close()
