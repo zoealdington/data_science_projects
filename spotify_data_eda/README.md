@@ -1,0 +1,1 @@
+As part of the company hackathon in 2018, we created an in-house radio station which only played songs in the employees' top spotify tracks. The data was retrieved from the Spotify API. I explored the data using Python.
